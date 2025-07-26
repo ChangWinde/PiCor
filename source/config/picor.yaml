@@ -1,0 +1,32 @@
+sac:
+  discount: 0.99
+  alpha_lr: 0.0001
+  actor_lr: 0.0001
+  critic_lr: 0.0001
+  critic_tau: 0.005
+  vcritic_lr: 0.0001
+  batch_size: 1024
+  sac_epoch: 1
+  autotune: true
+  max_grad_norm: 0.5
+  init_temperature: 0.1
+  actor_update_frequency: 1
+  critic_target_update_frequency: 2
+
+actor_cfg:
+  hidden_dim: 512
+  hidden_depth: 3
+  log_std_bounds: [-5, 5]
+
+critic_cfg:
+  hidden_dim: 512
+  hidden_depth: 3
+
+corr_v_cfg:
+  hidden_dim: 512
+  hidden_depth: 3
+
+corr:
+  lamda: 0.95
+  epsilon: 0.2
+  corr_epochs: 10
